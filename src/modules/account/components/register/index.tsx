@@ -22,7 +22,7 @@ const Register = ({ setCurrentView }: Props) => {
         Crie sua conta
       </h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-4">
-        Crie sua conta e tenha acesso a uma experiência de compra aprimorada.
+        E tenha acesso a uma experiência de compra aprimorada.
       </p>
       <form className="w-full flex flex-col" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
@@ -60,7 +60,7 @@ const Register = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} data-testid="register-error" />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
-          Ao criar uma conta, você concorda com a{" "}
+          Ao criar uma conta, você concorda com a nossa{" "}
           <LocalizedClientLink
             href="/content/privacy-policy"
             className="underline"
@@ -74,9 +74,9 @@ const Register = ({ setCurrentView }: Props) => {
           >
             Termos de Uso
           </LocalizedClientLink>
-          da Kaimara.
+          .
         </span>
-        <SubmitButton className="w-full mt-6" data-testid="register-button">Join</SubmitButton>
+        <SubmitButton className="w-full mt-6" data-testid="register-button">Cadastrar</SubmitButton>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
       Já possui uma conta?{" "}

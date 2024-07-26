@@ -34,7 +34,7 @@ const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
         <div className="flex items-center justify-between">
           <span className="flex gap-x-1 items-center">
             Subtotal
-            <Tooltip content="Cart total excluding shipping and taxes.">
+            <Tooltip content="O total do carrinho sem incluir o valor da entrega.">
               <InformationCircleSolid color="var(--fg-muted)" />
             </Tooltip>
           </span>
@@ -44,7 +44,7 @@ const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
         </div>
         {!!discount_total && (
           <div className="flex items-center justify-between">
-            <span>Discount</span>
+            <span>Desconto</span>
             <span
               className="text-ui-fg-interactive"
               data-testid="cart-discount"
@@ -55,7 +55,7 @@ const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
           </div>
         )}
         <div className="flex items-center justify-between">
-          <span>Shipping</span>
+          <span>Entrega</span>
           <span data-testid="cart-shipping" data-value={shipping_total || 0}>
             {getAmount(shipping_total)}
           </span>
@@ -68,7 +68,7 @@ const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
         </div>
         {!!gift_card_total && (
           <div className="flex items-center justify-between">
-            <span>Gift card</span>
+            <span>Cupom de desconto</span>
             <span
               className="text-ui-fg-interactive"
               data-testid="cart-gift-card-amount"
