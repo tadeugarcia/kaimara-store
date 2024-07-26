@@ -51,7 +51,7 @@ export default async function Nav() {
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2"
+                  className="hover:text-ui-fg-base flex"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
