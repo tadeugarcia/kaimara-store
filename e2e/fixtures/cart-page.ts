@@ -73,7 +73,7 @@ export class CartPage extends BasePage {
         hasText: title,
       })
       .filter({
-        hasText: `Variant: ${variant}`,
+        hasText: `${variant}`,
       })
     return {
       productRow,
