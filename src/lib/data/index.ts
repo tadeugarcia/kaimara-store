@@ -328,7 +328,7 @@ export async function updateShippingAddress(
 }
 
 export const listCustomerOrders = cache(async function (
-  limit: number = 10,
+  limit: number = 100,
   offset: number = 0
 ) {
   const headers = getMedusaHeaders(["customer"])
