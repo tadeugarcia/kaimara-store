@@ -13,20 +13,17 @@ export default function CheckoutLayout({
         <nav className="flex h-full items-center content-container justify-between">
           <LocalizedClientLink
             href="/cart"
-            className="text-small-semi text-ui-fg-base flex items-center gap-x-2 flex-1 basis-0 text-ui-fg-subtle hover:text-ui-fg-base"
+            className="text-small-semi flex items-center gap-x-2 flex-1 basis-0"
             data-testid="back-to-cart-link"
           >
             <ChevronDown className="rotate-90" size={24} />
-            <span className="mt-px hidden small:block txt-compact-plus">
-              Voltar ao carrinho
-            </span>
-            <span className="mt-px block small:hidden txt-compact-plus">
+            <span className="mt-px txt-medium-plus">
               Voltar
             </span>
           </LocalizedClientLink>
           <LocalizedClientLink
             href="/"
-            className="txt-compact-xlarge-plus hover:text-ui-fg-base"
+            className="txt-compact-xlarge-plus"
             data-testid="store-link"
           >
             Kaimara
