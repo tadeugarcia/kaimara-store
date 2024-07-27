@@ -103,7 +103,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             data-testid="address-edit-button"
           >
             <Edit />
-            Edit
+            Editar
           </button>
           <button
             className="text-small-regular text-ui-fg-base flex items-center gap-x-2"
@@ -111,7 +111,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             data-testid="address-delete-button"
           >
             {removing ? <Spinner /> : <Trash />}
-            Remove
+            Remover
           </button>
         </div>
       </div>
@@ -122,31 +122,28 @@ const EditAddress: React.FC<EditAddressProps> = ({
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
-            <div className="grid grid-cols-1 gap-y-2">
-              <div className="grid grid-cols-2 gap-x-2">
-                <Input
-                  label="Nome"
-                  name="first_name"
-                  required
-                  autoComplete="given-name"
-                  defaultValue={address.first_name || undefined}
-                  data-testid="first-name-input"
-                />
-                <Input
-                  label="Sobrenome"
-                  name="last_name"
-                  required
-                  autoComplete="family-name"
-                  defaultValue={address.last_name || undefined}
-                  data-testid="last-name-input"
-                />
-              </div>
+            <div className="grid grid-cols-2 gap-4">
               <Input
-                label="Empresa"
-                name="company"
-                autoComplete="organization"
-                defaultValue={address.company || undefined}
-                data-testid="company-input"
+                label="Nome"
+                name="first_name"
+                autoComplete="given-name"
+                defaultValue={address.first_name || undefined}
+                data-testid="first-name-input"
+              />
+              <Input
+                label="Sobrenome"
+                name="last_name"
+                autoComplete="family-name"
+                defaultValue={address.last_name || undefined}
+                data-testid="last-name-input"
+              />
+              <Input
+                label="Telefone"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                defaultValue={address.phone || undefined}
+                data-testid="phone-input"
               />
               <Input
                 label="Endereço"
@@ -163,8 +160,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 defaultValue={address.address_2 || undefined}
                 data-testid="address-2-input"
               />
-              <div className="grid grid-cols-[144px_1fr] gap-x-2">
-                <Input
+              <Input
                   label="CEP"
                   name="postal_code"
                   type="tel"
@@ -173,23 +169,24 @@ const EditAddress: React.FC<EditAddressProps> = ({
                   defaultValue={address.postal_code || undefined}
                   data-testid="postal-code-input"
                 />
-                <Input
-                  label="Cidade"
-                  name="city"
-                  required
-                  autoComplete="locality"
-                  defaultValue={address.city || undefined}
-                  data-testid="city-input"
-                />
-              </div>
+              <Input
+                label="Cidade"
+                name="city"
+                required
+                autoComplete="locality"
+                defaultValue={address.city || undefined}
+                data-testid="city-input"
+              />
               <Input
                 label="Estado"
                 name="province"
+                required
                 autoComplete="address-level1"
                 defaultValue={address.province || undefined}
                 data-testid="state-input"
               />
               <CountrySelect
+                className="hidden"
                 name="country_code"
                 region={region}
                 required
@@ -198,12 +195,12 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 data-testid="country-select"
               />
               <Input
-                label="Telefone"
-                name="phone"
-                type="tel"
-                autoComplete="tel"
-                defaultValue={address.phone || undefined}
-                data-testid="phone-input"
+                className="hidden"
+                label=""
+                name="company"
+                autoComplete="organization"
+                defaultValue={address.company || undefined}
+                data-testid="company-input"
               />
             </div>
             {formState.error && (

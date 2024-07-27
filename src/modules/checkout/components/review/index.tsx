@@ -44,6 +44,9 @@ const Review = ({
           <div className="flex items-start gap-x-1 w-full mb-6">
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
+                Confira as informações antes de finalizar a compra.
+              </Text>
+              <Text className="txt-medium-plus text-ui-fg-base mb-1">
                 Ao concluir seu pedido, você concorda com a nossa{" "}
                   <LocalizedClientLink
                     href="/content/privacy-policy"

@@ -15,9 +15,9 @@ const ShippingDetails = ({ order }: ShippingDetailsProps) => {
         Entrega
       </Heading>
       <div className="flex items-start gap-x-8">
-        <div className="flex flex-col w-1/3" data-testid="shipping-address-summary">
+        <div className="flex flex-col md:w-full lg:w-1/3" data-testid="shipping-address-summary">
           <Text className="txt-medium-plus text-ui-fg-base mb-1">
-            Shipping Address
+            Endereço de entrega
           </Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_address.first_name}{" "}
@@ -35,7 +35,7 @@ const ShippingDetails = ({ order }: ShippingDetailsProps) => {
           </Text>
         </div>
 
-        <div className="flex flex-col w-1/3 " data-testid="shipping-contact-summary">
+        <div className="flex flex-col md:w-full lg:w-1/3 " data-testid="shipping-contact-summary">
           <Text className="txt-medium-plus text-ui-fg-base mb-1">Contato</Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_address.phone}
@@ -43,8 +43,8 @@ const ShippingDetails = ({ order }: ShippingDetailsProps) => {
           <Text className="txt-medium text-ui-fg-subtle">{order.email}</Text>
         </div>
 
-        <div className="flex flex-col w-1/3" data-testid="shipping-method-summary">
-          <Text className="txt-medium-plus text-ui-fg-base mb-1">Forma de entrega</Text>
+        <div className="flex flex-col md:w-full lg:w-1/3" data-testid="shipping-method-summary">
+          <Text className="txt-medium-plus text-ui-fg-base mb-1">Tipo de entrega</Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_methods[0].shipping_option?.name} (
             {formatAmount({

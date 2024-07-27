@@ -57,7 +57,6 @@ const BillingAddress = ({
           autoComplete="given-name"
           value={formData["billing_address.first_name"]}
           onChange={handleChange}
-          required
           data-testid="billing-first-name-input"
         />
         <Input
@@ -66,8 +65,16 @@ const BillingAddress = ({
           autoComplete="family-name"
           value={formData["billing_address.last_name"]}
           onChange={handleChange}
-          required
           data-testid="billing-last-name-input"
+        />
+        <Input
+          label="Telefone"
+          name="billing_address.phone"
+          type="tel"
+          autoComplete="tel"
+          value={formData["billing_address.phone"]}
+          onChange={handleChange}
+          data-testid="billing-phone-input"
         />
         <Input
           label="Endereço"
@@ -77,14 +84,6 @@ const BillingAddress = ({
           onChange={handleChange}
           required
           data-testid="billing-address-input"
-        />
-        <Input
-          label="Empresa"
-          name="billing_address.company"
-          value={formData["billing_address.company"]}
-          onChange={handleChange}
-          autoComplete="organization"
-          data-testid="billing-company-input"
         />
         <Input
           label="CEP"
@@ -105,31 +104,32 @@ const BillingAddress = ({
           required
           data-testid="billing-city-input"
         />
-        <CountrySelect
-          name="billing_address.country_code"
-          autoComplete="country"
-          region={cart?.region}
-          value={formData["billing_address.country_code"]}
-          onChange={handleChange}
-          required
-          data-testid="billing-country-select"
-        />
         <Input
           label="Estado"
           name="billing_address.province"
           autoComplete="address-level1"
           value={formData["billing_address.province"]}
           onChange={handleChange}
+          required
           data-testid="billing-province-input"
         />
-        <Input
-          label="Telefone"
-          name="billing_address.phone"
-          type="tel"
-          autoComplete="tel"
-          value={formData["billing_address.phone"]}
+        <CountrySelect
+          className="hidden"
+          name="billing_address.country_code"
+          autoComplete="country"
+          region={cart?.region}
+          value={formData["billing_address.country_code"]}
           onChange={handleChange}
-          data-testid="billing-phone-input"
+          data-testid="billing-country-select"
+        />
+        <Input
+          className="hidden"
+          label=""
+          name="billing_address.company"
+          value={formData["billing_address.company"]}
+          onChange={handleChange}
+          autoComplete="organization"
+          data-testid="billing-company-input"
         />
       </div>
     </>

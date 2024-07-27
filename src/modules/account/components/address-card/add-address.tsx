@@ -57,28 +57,25 @@ const AddAddress = ({ region }: { region: Region }) => {
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
-            <div className="flex flex-col gap-y-2">
-              <div className="grid grid-cols-2 gap-x-2">
-                <Input
-                  label="Nome"
-                  name="first_name"
-                  required
-                  autoComplete="given-name"
-                  data-testid="first-name-input"
-                />
-                <Input
-                  label="Sobrenome"
-                  name="last_name"
-                  required
-                  autoComplete="family-name"
-                  data-testid="last-name-input"
-                />
-              </div>
+            <div className="grid grid-cols-2 gap-4">
               <Input
-                label="Empresa"
-                name="company"
-                autoComplete="organization"
-                data-testid="company-input"
+                label="Nome"
+                name="first_name"
+                autoComplete="given-name"
+                data-testid="first-name-input"
+              />
+              <Input
+                label="Sobrenome"
+                name="last_name"
+                autoComplete="family-name"
+                data-testid="last-name-input"
+              />
+              <Input
+                label="Telefone"
+                name="phone" 
+                type="tel"
+                autoComplete="tel" 
+                data-testid="phone-input"
               />
               <Input
                 label="Endereço"
@@ -93,23 +90,21 @@ const AddAddress = ({ region }: { region: Region }) => {
                 autoComplete="address-line2"
                 data-testid="address-2-input"
               />
-              <div className="grid grid-cols-[144px_1fr] gap-x-2">
-                <Input
-                  label="CEP"
-                  name="postal_code"
-                  type="tel"
-                  required
-                  autoComplete="postal-code"
-                  data-testid="postal-code-input"
-                />
-                <Input
-                  label="Cidade"
-                  name="city"
-                  required
-                  autoComplete="locality"
-                  data-testid="city-input"
-                />
-              </div>
+              <Input
+                label="CEP"
+                name="postal_code"
+                type="tel"
+                required
+                autoComplete="postal-code"
+                data-testid="postal-code-input"
+              />
+              <Input
+                label="Cidade"
+                name="city"
+                required
+                autoComplete="locality"
+                data-testid="city-input"
+              />
               <Input
                 label="Estado"
                 name="province"
@@ -118,6 +113,7 @@ const AddAddress = ({ region }: { region: Region }) => {
                 data-testid="state-input"
               />
               <CountrySelect
+                className="hidden"
                 region={region}
                 name="country_code"
                 required
@@ -125,11 +121,11 @@ const AddAddress = ({ region }: { region: Region }) => {
                 data-testid="country-select"
               />
               <Input
-                label="Telefone"
-                name="phone" 
-                type="tel"
-                autoComplete="tel" 
-                data-testid="phone-input"
+                className="hidden"
+                label=""
+                name="company"
+                autoComplete="organization"
+                data-testid="company-input"
               />
             </div>
             {formState.error && (

@@ -28,7 +28,7 @@ const CheckoutSummary = async () => {
           level="h2"
           className="flex flex-row text-3xl-regular items-baseline"
         >
-          Carrinho
+          Resumo do pedido
         </Heading>
         <Divider className="my-6" />
         <CartTotals data={cart} />

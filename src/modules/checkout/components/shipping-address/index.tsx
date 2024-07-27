@@ -91,7 +91,6 @@ const ShippingAddress = ({
           autoComplete="given-name"
           value={formData["shipping_address.first_name"]}
           onChange={handleChange}
-          required
           data-testid="shipping-first-name-input"
         />
         <Input
@@ -100,7 +99,6 @@ const ShippingAddress = ({
           autoComplete="family-name"
           value={formData["shipping_address.last_name"]}
           onChange={handleChange}
-          required
           data-testid="shipping-last-name-input"
         />
         <Input
@@ -111,7 +109,6 @@ const ShippingAddress = ({
           autoComplete="email"
           value={formData.email}
           onChange={handleChange}
-          required
           data-testid="shipping-email-input"
         />
         <Input
@@ -121,7 +118,6 @@ const ShippingAddress = ({
           autoComplete="tel"
           value={formData["shipping_address.phone"]}
           onChange={handleChange}
-          required
           data-testid="shipping-phone-input"
         />
         <Input
@@ -158,6 +154,7 @@ const ShippingAddress = ({
           autoComplete="address-level1"
           value={formData["shipping_address.province"]}
           onChange={handleChange}
+          required
           data-testid="shipping-province-input"
         />
         <CountrySelect
@@ -181,7 +178,7 @@ const ShippingAddress = ({
       </div>
       <div className="my-8">
         <Checkbox
-          label="O endereço de cobrança é o mesmo do endereço de entrega."
+          label="O endereço de cobrança é o mesmo da entrega."
           name="same_as_billing"
           checked={checked}
           onChange={onChange}

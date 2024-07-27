@@ -56,7 +56,7 @@ const Addresses = ({
           level="h2"
           className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
         >
-          Endereço de entrega
+          Endereço
           {!isOpen && <CheckCircleSolid />}
         </Heading>
         {!isOpen && cart?.shipping_address && (
@@ -104,7 +104,7 @@ const Addresses = ({
             {cart && cart.shipping_address ? (
               <div className="flex items-start gap-x-8">
                 <div className="flex items-start gap-x-1 w-full">
-                  <div className="flex flex-col w-1/3" data-testid="shipping-address-summary">
+                  <div className="flex flex-col md:w-full lg:w-1/3" data-testid="shipping-address-summary">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
                       Endereço de entrega
                     </Text>
@@ -125,7 +125,7 @@ const Addresses = ({
                     </Text>
                   </div>
 
-                  <div className="flex flex-col w-1/3 " data-testid="shipping-contact-summary">
+                  <div className="flex flex-col md:w-full lg:w-1/3 " data-testid="shipping-contact-summary">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
                       Contato
                     </Text>
@@ -137,14 +137,14 @@ const Addresses = ({
                     </Text>
                   </div>
 
-                  <div className="flex flex-col w-1/3" data-testid="billing-address-summary">
+                  <div className="flex flex-col md:w-full lg:w-1/3" data-testid="billing-address-summary">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
                       Endereço de cobrança
                     </Text>
 
                     {sameAsSBilling ? (
                       <Text className="txt-medium text-ui-fg-subtle">
-                        O endereço de cobrança é o mesmo do endereço de entrega.
+                        O endereço de cobrança é o mesmo da entrega.
                       </Text>
                     ) : (
                       <>
