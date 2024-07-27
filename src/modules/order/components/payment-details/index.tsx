@@ -18,8 +18,8 @@ const PaymentDetails = ({ order }: PaymentDetailsProps) => {
       </Heading>
       <div>
         {payment && (
-          <div className="flex items-start gap-x-1 w-full">
-            <div className="flex flex-col md:w-full w-1/3">
+          <div className="flex items-start sm:flex-row gap-4 w-full">
+            <div className="flex flex-col sm:w-full md:w-1/3">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
                 Forma de pagamento
               </Text>
@@ -27,7 +27,7 @@ const PaymentDetails = ({ order }: PaymentDetailsProps) => {
                 {paymentInfoMap[payment.provider_id].title}
               </Text>
             </div>
-            <div className="flex flex-col md:w-full w-2/3">
+            <div className="flex flex-col sm:w-full md:w-2/3">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
                 Detalhes do pagamento
               </Text>
