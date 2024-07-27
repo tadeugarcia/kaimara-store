@@ -13,7 +13,7 @@ export default async function NotFound() {
       <p className="text-small-regular text-ui-fg-base">
         A página que você tentou acessar não existe.
       </p>
-      <InteractiveLink href="/">Ir para a lista de produtos</InteractiveLink>
+      <InteractiveLink href="/store">Ir para a lista de produtos</InteractiveLink>
     </div>
   )
 }

@@ -14,7 +14,7 @@ export default function NotFound() {
       <p className="text-small-regular text-ui-fg-base">
         O carrinho que você tentou acessar não existe. Limpe seus cookies e tente novamente.
       </p>
-      <InteractiveLink href="/">Ir para a lista de produtos</InteractiveLink>
+      <InteractiveLink href="/store">Ir para a lista de produtos</InteractiveLink>
     </div>
   )
 }

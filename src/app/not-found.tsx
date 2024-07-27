@@ -17,7 +17,7 @@ export default function NotFound() {
       </p>
       <Link
         className="flex gap-x-1 items-center group"
-        href="/"
+        href="/store"
       >
         <Text className="text-ui-fg-interactive">Ir para a lista de produtos</Text>
         <ArrowUpRightMini
