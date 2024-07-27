@@ -66,7 +66,7 @@ const Register = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} data-testid="register-error" />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
-          Ao criar uma conta, você concorda com a nossa{" "}
+          Ao criar sua conta, você concorda com a nossa{" "}
           <LocalizedClientLink
             href="/content/privacy-policy"
             className="underline"

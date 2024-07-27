@@ -104,6 +104,27 @@ const ShippingAddress = ({
           data-testid="shipping-last-name-input"
         />
         <Input
+          label="E-mail"
+          name="email"
+          type="email"
+          title="Digite um email válido."
+          autoComplete="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          data-testid="shipping-email-input"
+        />
+        <Input
+          label="Telefone"
+          name="shipping_address.phone"
+          type="tel"
+          autoComplete="tel"
+          value={formData["shipping_address.phone"]}
+          onChange={handleChange}
+          required
+          data-testid="shipping-phone-input"
+        />
+        <Input
           label="Endereço"
           name="shipping_address.address_1"
           autoComplete="address-line1"
@@ -111,14 +132,6 @@ const ShippingAddress = ({
           onChange={handleChange}
           required
           data-testid="shipping-address-input"
-        />
-        <Input
-          label="Empresa"
-          name="shipping_address.company"
-          value={formData["shipping_address.company"]}
-          onChange={handleChange}
-          autoComplete="organization"
-          data-testid="shipping-company-input"
         />
         <Input
           label="CEP"
@@ -139,15 +152,6 @@ const ShippingAddress = ({
           required
           data-testid="shipping-city-input"
         />
-        <CountrySelect
-          name="shipping_address.country_code"
-          autoComplete="country"
-          region={cart?.region}
-          value={formData["shipping_address.country_code"]}
-          onChange={handleChange}
-          required
-          data-testid="shipping-country-select"
-        />
         <Input
           label="Estado"
           name="shipping_address.province"
@@ -155,6 +159,24 @@ const ShippingAddress = ({
           value={formData["shipping_address.province"]}
           onChange={handleChange}
           data-testid="shipping-province-input"
+        />
+        <CountrySelect
+          className="hidden"
+          name="shipping_address.country_code"
+          autoComplete="country"
+          region={cart?.region}
+          value={formData["shipping_address.country_code"]}
+          onChange={handleChange}
+          data-testid="shipping-country-select"
+        />
+        <Input
+          className="hidden"
+          label="Empresa"
+          name="shipping_address.company"
+          value={formData["shipping_address.company"]}
+          onChange={handleChange}
+          autoComplete="organization"
+          data-testid="shipping-company-input"
         />
       </div>
       <div className="my-8">
@@ -164,28 +186,6 @@ const ShippingAddress = ({
           checked={checked}
           onChange={onChange}
           data-testid="billing-address-checkbox"
-        />
-      </div>
-      <div className="grid grid-cols-2 gap-4 mb-4">
-        <Input
-          label="Email"
-          name="email"
-          type="email"
-          title="Digite um endereço de email válido."
-          autoComplete="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          data-testid="shipping-email-input"
-        />
-        <Input
-          label="Telefone"
-          name="shipping_address.phone"
-          type="tel"
-          autoComplete="tel"
-          value={formData["shipping_address.phone"]}
-          onChange={handleChange}
-          data-testid="shipping-phone-input"
         />
       </div>
     </>
