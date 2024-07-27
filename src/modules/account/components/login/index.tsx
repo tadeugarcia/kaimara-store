@@ -15,9 +15,9 @@ const Login = ({ setCurrentView }: Props) => {
 
   return (
     <div className="max-w-sm w-full flex flex-col items-center" data-testid="login-page">
-      <h1 className="text-large-semi uppercase mb-6">Que bom ter você de volta</h1>
+      <h1 className="text-large-semi uppercase mb-6">Acesse sua conta</h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-8">
-        Entre para acessar uma experiência de compra aprimorada.
+        Acesse sua conta para ver pedidos anteriores e facilitar compras futuras.
       </p>
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
@@ -43,7 +43,7 @@ const Login = ({ setCurrentView }: Props) => {
         <SubmitButton data-testid="sign-in-button" className="w-full mt-6">Entrar</SubmitButton>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
-        Ainda não tem uma conta?{" "}
+        Ainda não possui uma conta?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}
           className="underline"

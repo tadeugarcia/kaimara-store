@@ -171,7 +171,7 @@ const ShippingAddress = ({
         />
         <Input
           className="hidden"
-          label="Empresa"
+          label=""
           name="shipping_address.company"
           value={formData["shipping_address.company"]}
           onChange={handleChange}

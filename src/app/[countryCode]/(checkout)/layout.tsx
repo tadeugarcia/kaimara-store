@@ -13,14 +13,14 @@ export default function CheckoutLayout({
         <nav className="flex h-full items-center content-container justify-between">
           <LocalizedClientLink
             href="/cart"
-            className="text-small-semi text-ui-fg-base flex items-center gap-x-2 flex-1 basis-0"
+            className="text-small-semi text-ui-fg-base flex items-center gap-x-2 flex-1 basis-0 text-ui-fg-subtle hover:text-ui-fg-base"
             data-testid="back-to-cart-link"
           >
-            <ChevronDown className="rotate-90" size={16} />
-            <span className="mt-px hidden small:block txt-compact-plus text-ui-fg-subtle hover:text-ui-fg-base ">
+            <ChevronDown className="rotate-90" size={24} />
+            <span className="mt-px hidden small:block txt-compact-plus">
               Voltar ao carrinho
             </span>
-            <span className="mt-px block small:hidden txt-compact-plus text-ui-fg-subtle hover:text-ui-fg-base">
+            <span className="mt-px block small:hidden txt-compact-plus">
               Voltar
             </span>
           </LocalizedClientLink>

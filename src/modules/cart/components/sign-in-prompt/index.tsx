@@ -3,13 +3,13 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 
 const SignInPrompt = () => {
   return (
-    <div className="bg-white flex items-center justify-between">
+    <div className="bg-white flex items-center justify-between gap-y-2">
       <div>
         <Heading level="h2" className="txt-xlarge">
           Já possui uma conta?
         </Heading>
         <Text className="txt-medium text-ui-fg-subtle mt-2">
-          Entre para acessar uma experiência de compra aprimorada.
+          Entre para acessar seu endereço de entrega e informações financeiras.
         </Text>
       </div>
       <div>
