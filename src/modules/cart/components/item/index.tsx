@@ -52,7 +52,7 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
           href={`/products/${handle}`}
           className={clx("flex", {
             "w-16": type === "preview",
-            "small:w-24 w-12": type === "full",
+            "small:w-24 w-auto": type === "full",
           })}
         >
           <Thumbnail thumbnail={item.thumbnail} size="square" />
