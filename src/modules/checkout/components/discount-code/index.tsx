@@ -56,7 +56,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   const [message, formAction] = useFormState(submitDiscountForm, null)
 
   return (
-    <div className="w-full bg-white flex flex-col">
+    {/* <div className="w-full bg-white flex flex-col">
       <div className="txt-medium">
         {gift_cards.length > 0 && (
           <div className="flex flex-col mb-4">
@@ -142,9 +142,6 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               >
                 Adicionar cupom de desconto
               </button>
-              <Tooltip content="Você pode adicionar vários cartões-presente, mas apenas um código de desconto.">
-                <InformationCircleSolid color="var(--fg-muted)" />
-              </Tooltip>
             </Label>
             {isOpen && (
               <>
@@ -172,7 +169,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
           </form>
         )}
       </div>
-    </div>
+    </div> */}
   )
 }
 
