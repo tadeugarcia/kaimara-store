@@ -18,7 +18,7 @@ const PaymentDetails = ({ order }: PaymentDetailsProps) => {
       </Heading>
       <div>
         {payment && (
-          <div className="flex items-start sm:flex-row gap-4 w-full">
+          <div className="flex flex-col items-start sm:flex-row gap-4 w-full">
             <div className="flex flex-col sm:w-full md:w-1/3">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
                 Forma de pagamento
