@@ -170,7 +170,7 @@ const CartDropdown = ({
                   <div className="flex items-center justify-between">
                     <span className="text-ui-fg-base font-semibold">
                       Subtotal{" "}
-                      <span className="font-normal">(sem incluir a entrega)</span>
+                      <span className="font-normal">(Sem incluir a entrega)</span>
                     </span>
                     <span
                       className="text-large-semi"

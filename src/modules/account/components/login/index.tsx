@@ -19,7 +19,7 @@ const Login = ({ setCurrentView }: Props) => {
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="Email"
+            label="E-mail"
             name="email"
             type="email"
             title="Digite um endereço de email válido."
