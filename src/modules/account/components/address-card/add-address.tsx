@@ -47,27 +47,27 @@ const AddAddress = ({ region }: { region: Region }) => {
         onClick={open}
         data-testid="add-address-button"
       >
-        <span className="text-base-semi">New address</span>
+        <span className="text-base-semi">Novo endereço Brasil</span>
         <Plus />
       </button>
 
       <Modal isOpen={state} close={close} data-testid="add-address-modal">
         <Modal.Title>
-          <Heading className="mb-2">Add address</Heading>
+          <Heading className="mb-2">Adicionar endereço</Heading>
         </Modal.Title>
         <form action={formAction}>
           <Modal.Body>
             <div className="flex flex-col gap-y-2">
               <div className="grid grid-cols-2 gap-x-2">
                 <Input
-                  label="First name"
+                  label="Nome"
                   name="first_name"
                   required
                   autoComplete="given-name"
                   data-testid="first-name-input"
                 />
                 <Input
-                  label="Last name"
+                  label="Sobrenome"
                   name="last_name"
                   required
                   autoComplete="family-name"
@@ -75,34 +75,35 @@ const AddAddress = ({ region }: { region: Region }) => {
                 />
               </div>
               <Input
-                label="Company"
+                label="Empresa"
                 name="company"
                 autoComplete="organization"
                 data-testid="company-input"
               />
               <Input
-                label="Address"
+                label="Endereço"
                 name="address_1"
                 required
                 autoComplete="address-line1"
                 data-testid="address-1-input"
               />
               <Input
-                label="Apartment, suite, etc."
+                label="Apartamento, suite, etc."
                 name="address_2"
                 autoComplete="address-line2"
                 data-testid="address-2-input"
               />
               <div className="grid grid-cols-[144px_1fr] gap-x-2">
                 <Input
-                  label="Postal code"
+                  label="CEP"
                   name="postal_code"
+                  type="tel"
                   required
                   autoComplete="postal-code"
                   data-testid="postal-code-input"
                 />
                 <Input
-                  label="City"
+                  label="Cidade"
                   name="city"
                   required
                   autoComplete="locality"
@@ -110,8 +111,9 @@ const AddAddress = ({ region }: { region: Region }) => {
                 />
               </div>
               <Input
-                label="Province / State"
+                label="Estado"
                 name="province"
+                required
                 autoComplete="address-level1"
                 data-testid="state-input"
               />
@@ -120,9 +122,16 @@ const AddAddress = ({ region }: { region: Region }) => {
                 name="country_code"
                 required
                 autoComplete="country"
+                value={Brasil}
                 data-testid="country-select"
               />
-              <Input label="Phone" name="phone" autoComplete="phone" data-testid="phone-input" />
+              <Input
+                label="Telefone"
+                name="phone" 
+                type="tel"
+                autoComplete="tel" 
+                data-testid="phone-input"
+              />
             </div>
             {formState.error && (
               <div className="text-rose-500 text-small-regular py-2" data-testid="address-error">
@@ -139,9 +148,9 @@ const AddAddress = ({ region }: { region: Region }) => {
                 className="h-10"
                 data-testid="cancel-button"
               >
-                Cancel
+                Cancelar
               </Button>
-              <SubmitButton data-testid="save-button">Save</SubmitButton>
+              <SubmitButton data-testid="save-button">Salvar</SubmitButton>
             </div>
           </Modal.Footer>
         </form>
