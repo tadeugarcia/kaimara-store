@@ -49,14 +49,14 @@ const Review = ({
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
                 Ao concluir seu pedido, você concorda com a nossa{" "}
                   <LocalizedClientLink
-                    href="/content/privacy-policy"
+                    href="/privacy-policy"
                     className="underline"
                   >
                     Política de Privacidade
                   </LocalizedClientLink>{" "}
                   e os{" "}
                   <LocalizedClientLink
-                    href="/content/terms-of-use"
+                    href="/terms-of-use"
                     className="underline"
                   >
                     Termos de Uso

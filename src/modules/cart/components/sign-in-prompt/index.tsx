@@ -8,7 +8,7 @@ const SignInPrompt = () => {
         <Heading level="h2" className="txt-xlarge">
           Já possui uma conta?
         </Heading>
-        <Text className="txt-xlarge-plus text-ui-fg-subtle mb-2">
+        <Text className="text-ui-fg-subtle mb-2">
           Entre para acessar seu endereço de entrega e informações financeiras.
         </Text>
       </div>
