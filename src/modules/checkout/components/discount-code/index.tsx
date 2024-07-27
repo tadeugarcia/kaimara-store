@@ -142,7 +142,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               >
                 Adicionar cupom de desconto
               </button>
-              <Tooltip content="You can add multiple gift cards, but only one discount code.">
+              <Tooltip content="Você pode adicionar vários cartões-presente, mas apenas um código de desconto.">
                 <InformationCircleSolid color="var(--fg-muted)" />
               </Tooltip>
             </Label>
