@@ -15,10 +15,7 @@ const Login = ({ setCurrentView }: Props) => {
 
   return (
     <div className="max-w-sm w-full flex flex-col items-center" data-testid="login-page">
-      <h1 className="text-large-semi uppercase mb-6">Acesse sua conta</h1>
-      <p className="text-center text-base-regular text-ui-fg-base mb-8">
-        Acesse sua conta para ver pedidos anteriores e facilitar compras futuras.
-      </p>
+      <h1 className="text-large-semi mb-6">Acesse sua conta</h1>
       <form className="w-full" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
