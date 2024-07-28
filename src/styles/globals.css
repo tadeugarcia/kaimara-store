@@ -110,3 +110,16 @@
     @apply text-[32px] leading-[44px] font-semibold;
   }
 }
+
+button[type="submit"] {
+  background-color: #00A838;
+  color: white;
+  border-radius: 24px;
+  font-size: 16px;
+  padding: 12px;
+  box-shadow: none;
+}
+
+.button-inverted-hover-gradient:after, .button-inverted-hover-gradient:hover:after {
+  background-image: none;
+}
