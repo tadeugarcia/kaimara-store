@@ -79,8 +79,8 @@ const Item = ({ item, region, type = "full" }: ItemProps) => {
                   length: Math.min(
                     item.variant.inventory_quantity > 0
                       ? item.variant.inventory_quantity
-                      : 100,
-                    100
+                      : 99,
+                    99
                   ),
                 },
                 (_, i) => (
