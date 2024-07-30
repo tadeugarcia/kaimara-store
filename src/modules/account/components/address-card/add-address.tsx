@@ -113,7 +113,6 @@ const AddAddress = ({ region }: { region: Region }) => {
                 data-testid="state-input"
               />
               <CountrySelect
-                label="País"
                 region={region}
                 name="country_code"
                 required

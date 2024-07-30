@@ -114,7 +114,6 @@ const BillingAddress = ({
           data-testid="billing-province-input"
         />
         <CountrySelect
-          label="País"
           name="billing_address.country_code"
           autoComplete="country"
           region={cart?.region}

@@ -158,7 +158,6 @@ const ShippingAddress = ({
           data-testid="shipping-province-input"
         />
         <CountrySelect
-          label="País"
           name="shipping_address.country_code"
           autoComplete="country"
           region={cart?.region}
