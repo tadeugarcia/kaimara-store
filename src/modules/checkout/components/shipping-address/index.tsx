@@ -158,7 +158,7 @@ const ShippingAddress = ({
           data-testid="shipping-province-input"
         />
         <CountrySelect
-          className="hidden"
+          label="País"
           name="shipping_address.country_code"
           autoComplete="country"
           region={cart?.region}
@@ -167,8 +167,7 @@ const ShippingAddress = ({
           data-testid="shipping-country-select"
         />
         <Input
-          className="hidden"
-          label=""
+          label="Empresa"
           name="shipping_address.company"
           value={formData["shipping_address.company"]}
           onChange={handleChange}

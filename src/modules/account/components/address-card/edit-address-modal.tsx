@@ -186,7 +186,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 data-testid="state-input"
               />
               <CountrySelect
-                className="hidden"
+                label="País"
                 name="country_code"
                 region={region}
                 required
@@ -195,8 +195,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 data-testid="country-select"
               />
               <Input
-                className="hidden"
-                label=""
+                label="Empresa"
                 name="company"
                 autoComplete="organization"
                 defaultValue={address.company || undefined}
