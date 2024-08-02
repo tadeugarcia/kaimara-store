@@ -40,7 +40,7 @@ export default async function ProductPreview({
       <div data-testid="product-wrapper">
         <Thumbnail
           thumbnail={productPreview.thumbnail}
-          size="full"
+          size="square"
           isFeatured={isFeatured}
         />
         <div className="grid mt-4">
