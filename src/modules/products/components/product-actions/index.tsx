@@ -171,7 +171,7 @@ export default function ProductActions({
           data-testid="add-product-button"
         >
           {!variant
-            ? "Selecionar variante"
+            ? "Selecione a especificação"
             : !inStock
             ? "Fora de estoque"
             : "Adicionar ao carrinho"}

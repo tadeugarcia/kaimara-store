@@ -113,7 +113,6 @@ const AddAddress = ({ region }: { region: Region }) => {
                 data-testid="state-input"
               />
               <CountrySelect
-                className="hidden"
                 region={region}
                 name="country_code"
                 required
@@ -121,8 +120,7 @@ const AddAddress = ({ region }: { region: Region }) => {
                 data-testid="country-select"
               />
               <Input
-                className="hidden"
-                label=""
+                label="Empresa"
                 name="company"
                 autoComplete="organization"
                 data-testid="company-input"

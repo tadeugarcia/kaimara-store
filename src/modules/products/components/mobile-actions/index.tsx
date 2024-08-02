@@ -106,7 +106,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={open}
                 variant="secondary"
-                className="w-full"
+                className="w-full h-10"
                 data-testid="mobile-actions-button"
               >
                 <div className="flex items-center justify-between w-full">
@@ -121,12 +121,12 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={handleAddToCart}
                 disabled={!inStock || !variant}
-                className="w-full"
+                className="w-full h-10"
                 isLoading={isAdding}
                 data-testid="mobile-cart-button"
               >
                 {!variant
-                  ? "Selecionar variante"
+                  ? "Selecione a especificação"
                   : !inStock
                   ? "Fora de estoque"
                   : "Adicionar ao carrinho"}

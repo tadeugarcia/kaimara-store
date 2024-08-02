@@ -54,8 +54,12 @@
     @apply max-w-[1440px] w-full mx-auto px-6;
   }
 
-  .contrast-btn {
-    @apply px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition-colors duration-200 ease-in;
+  .btn-primary {
+    @apply px-4 py-2 bg-green-800 text-white rounded hover:bg-green-900 hover:text-white transition-colors duration-200 ease-in;
+  }
+
+  .btn-outline-primary {
+    @apply px-4 py-2 border border-green-700 text-green-700 rounded hover:bg-green-700 hover:text-white transition-colors duration-200 ease-in;
   }
 
   .text-xsmall-regular {
@@ -109,17 +113,4 @@
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
   }
-}
-
-button[type="submit"], button[type="submit"]:hover {
-  background-color: #00A838;
-  color: white;
-  border-radius: 24px;
-  font-size: 16px;
-  padding: 12px;
-  box-shadow: none;
-}
-
-.button-inverted-hover-gradient::after, .button-inverted-hover-gradient:hover::after {
-  background-image: none;
 }

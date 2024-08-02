@@ -1,14 +1,12 @@
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ItemsTemplate from "./items"
 import Summary from "./summary"
 import EmptyCartMessage from "../components/empty-cart-message"
 import { CartWithCheckoutStep } from "types/global"
-import SignInPrompt from "../components/sign-in-prompt"
-import Divider from "@modules/common/components/divider"
 import { Customer } from "@medusajs/medusa"
 
 const CartTemplate = ({
   cart,
-  customer,
 }: {
   cart: CartWithCheckoutStep | null
   customer: Omit<Customer, "password_hash"> | null
@@ -19,13 +17,16 @@ const CartTemplate = ({
         {cart?.items.length ? (
           <div className="grid grid-cols-1 small:grid-cols-[1fr_360px] gap-x-40">
             <div className="flex flex-col bg-white py-6 gap-y-6">
-              {!customer && (
-                <>
-                  <SignInPrompt />
-                  <Divider />
-                </>
-              )}
               <ItemsTemplate region={cart?.region} items={cart?.items} />
+              <div className="flex flex-col items-center mt-8">
+                <LocalizedClientLink
+                  href="/store"
+                  className="btn-outline-primary"
+                  data-testid="back-to-cart-link"
+                >
+                    Continuar comprando
+                </LocalizedClientLink>
+              </div>              
             </div>
             <div className="relative">
               <div className="flex flex-col gap-y-8 sticky top-12">

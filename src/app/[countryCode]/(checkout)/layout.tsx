@@ -17,9 +17,6 @@ export default function CheckoutLayout({
             data-testid="back-to-cart-link"
           >
             <ChevronDown className="rotate-90" size={24} />
-            <span className="mt-px txt-medium-plus">
-              Voltar
-            </span>
           </LocalizedClientLink>
           <LocalizedClientLink
             href="/"
