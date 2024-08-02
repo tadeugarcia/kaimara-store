@@ -171,7 +171,7 @@ const ShippingAddress = ({
           data-testid="shipping-country-select"
         />
         <Input
-          label="Empresa"
+          label="Empresa (Opcional)"
           name="shipping_address.company"
           value={formData["shipping_address.company"]}
           onChange={handleChange}

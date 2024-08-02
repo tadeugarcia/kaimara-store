@@ -126,7 +126,7 @@ const BillingAddress = ({
           data-testid="billing-country-select"
         />
         <Input
-          label="Empresa"
+          label="Empresa (Opcional)"
           name="billing_address.company"
           value={formData["billing_address.company"]}
           onChange={handleChange}
