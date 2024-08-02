@@ -117,6 +117,7 @@ const BillingAddress = ({
           name="billing_address.country_code"
           autoComplete="country"
           region={cart?.region}
+          required
           value={formData["billing_address.country_code"]}
           onChange={handleChange}
           data-testid="billing-country-select"

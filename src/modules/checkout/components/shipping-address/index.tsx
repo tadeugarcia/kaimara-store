@@ -161,6 +161,7 @@ const ShippingAddress = ({
           name="shipping_address.country_code"
           autoComplete="country"
           region={cart?.region}
+          required
           value={formData["shipping_address.country_code"]}
           onChange={handleChange}
           data-testid="shipping-country-select"
