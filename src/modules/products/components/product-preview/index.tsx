@@ -44,7 +44,6 @@ export default async function ProductPreview({
           isFeatured={isFeatured}
         />
         <div className="grid mt-4">
-          <Text className="txt-compact-medium" data-testid="product-title">{productPreview.category}</Text>
           <Text className="text-ui-fg-subtle" data-testid="product-title">{productPreview.title}</Text>
           <div className="flex items-center gap-x-2 txt-compact-medium">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
