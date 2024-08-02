@@ -22,7 +22,7 @@ const Summary = ({ cart }: SummaryProps) => {
       <Divider />
       <CartTotals data={cart} />
       <LocalizedClientLink href={"/checkout?step=" + cart.checkout_step} data-testid="checkout-button">
-        <Button className="w-full h-10">Ir para o pagamento</Button>
+        <Button className="w-full h-10 btn-primary">Ir para o pagamento</Button>
       </LocalizedClientLink>
     </div>
   )
