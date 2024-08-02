@@ -18,6 +18,15 @@ const CartTemplate = ({
           <div className="grid grid-cols-1 small:grid-cols-[1fr_360px] gap-x-40">
             <div className="flex flex-col bg-white py-6 gap-y-6">
               <ItemsTemplate region={cart?.region} items={cart?.items} />
+              <LocalizedClientLink
+                href="/store"
+                className="text-small-semi flex items-center gap-x-2 flex-1 basis-0"
+                data-testid="back-to-cart-link"
+              >
+                <span className="mt-px txt-medium-plus">
+                  Continuar comprando
+                </span>
+              </LocalizedClientLink>
             </div>
             <div className="relative">
               <div className="flex flex-col gap-y-8 sticky top-12">
@@ -28,15 +37,6 @@ const CartTemplate = ({
                     </div>
                   </>
                 )}
-                <LocalizedClientLink
-                  href="/store"
-                  className="text-small-semi flex items-center gap-x-2 flex-1 basis-0"
-                  data-testid="back-to-cart-link"
-                >
-                  <span className="mt-px txt-medium-plus">
-                    Continuar comprando
-                  </span>
-                </LocalizedClientLink>
               </div>
             </div>
           </div>
