@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, Heading } from "@medusajs/ui"
+import { Button, Heading } from "@medusajs/medusa"
 
 import CartTotals from "@modules/common/components/cart-totals"
 import { CartWithCheckoutStep } from "types/global"
