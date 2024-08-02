@@ -57,6 +57,7 @@ const BillingAddress = ({
           autoComplete="given-name"
           value={formData["billing_address.first_name"]}
           onChange={handleChange}
+          required
           data-testid="billing-first-name-input"
         />
         <Input
@@ -65,6 +66,7 @@ const BillingAddress = ({
           autoComplete="family-name"
           value={formData["billing_address.last_name"]}
           onChange={handleChange}
+          required
           data-testid="billing-last-name-input"
         />
         <Input
@@ -74,6 +76,7 @@ const BillingAddress = ({
           autoComplete="tel"
           value={formData["billing_address.phone"]}
           onChange={handleChange}
+          required
           data-testid="billing-phone-input"
         />
         <Input
@@ -117,9 +120,9 @@ const BillingAddress = ({
           name="billing_address.country_code"
           autoComplete="country"
           region={cart?.region}
-          required
           value={formData["billing_address.country_code"]}
           onChange={handleChange}
+          required
           data-testid="billing-country-select"
         />
         <Input

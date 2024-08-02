@@ -91,6 +91,7 @@ const ShippingAddress = ({
           autoComplete="given-name"
           value={formData["shipping_address.first_name"]}
           onChange={handleChange}
+          required
           data-testid="shipping-first-name-input"
         />
         <Input
@@ -99,6 +100,7 @@ const ShippingAddress = ({
           autoComplete="family-name"
           value={formData["shipping_address.last_name"]}
           onChange={handleChange}
+          required
           data-testid="shipping-last-name-input"
         />
         <Input
@@ -109,6 +111,7 @@ const ShippingAddress = ({
           autoComplete="email"
           value={formData.email}
           onChange={handleChange}
+          required
           data-testid="shipping-email-input"
         />
         <Input
@@ -118,6 +121,7 @@ const ShippingAddress = ({
           autoComplete="tel"
           value={formData["shipping_address.phone"]}
           onChange={handleChange}
+          required
           data-testid="shipping-phone-input"
         />
         <Input
@@ -161,9 +165,9 @@ const ShippingAddress = ({
           name="shipping_address.country_code"
           autoComplete="country"
           region={cart?.region}
-          required
           value={formData["shipping_address.country_code"]}
           onChange={handleChange}
+          required
           data-testid="shipping-country-select"
         />
         <Input
