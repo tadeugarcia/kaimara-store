@@ -21,7 +21,7 @@ const CartTemplate = ({
               <div className="flex flex-col items-center mt-8">
                 <LocalizedClientLink
                   href="/store"
-                  className="outline-btn"
+                  className="btn-outline-primary"
                   data-testid="back-to-cart-link"
                 >
                     Continuar comprando
