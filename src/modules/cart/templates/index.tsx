@@ -1,3 +1,4 @@
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ItemsTemplate from "./items"
 import Summary from "./summary"
 import EmptyCartMessage from "../components/empty-cart-message"
@@ -27,6 +28,15 @@ const CartTemplate = ({
                     </div>
                   </>
                 )}
+                <LocalizedClientLink
+                  href="/store"
+                  className="text-small-semi flex items-center gap-x-2 flex-1 basis-0"
+                  data-testid="back-to-cart-link"
+                >
+                  <span className="mt-px txt-medium-plus">
+                    Continuar comprando
+                  </span>
+                </LocalizedClientLink>
               </div>
             </div>
           </div>
