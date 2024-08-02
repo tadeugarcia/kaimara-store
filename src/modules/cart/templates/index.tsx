@@ -18,10 +18,10 @@ const CartTemplate = ({
           <div className="grid grid-cols-1 small:grid-cols-[1fr_360px] gap-x-40">
             <div className="flex flex-col bg-white py-6 gap-y-6">
               <ItemsTemplate region={cart?.region} items={cart?.items} />
-              <div className="flex items-center">
+              <div className="flex flex-col items-center">
                 <LocalizedClientLink
                   href="/store"
-                  className="txt-medium-plus"
+                  className="txt-medium-plus w-auto"
                   data-testid="back-to-cart-link"
                 >
                     Continuar comprando
