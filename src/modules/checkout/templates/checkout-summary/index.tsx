@@ -1,9 +1,7 @@
 import { Heading } from "@medusajs/ui"
 
 import ItemsPreviewTemplate from "@modules/cart/templates/preview"
-import DiscountCode from "@modules/checkout/components/discount-code"
 import CartTotals from "@modules/common/components/cart-totals"
-import Divider from "@modules/common/components/divider"
 import { cookies } from "next/headers"
 import { getCart } from "@lib/data"
 
@@ -25,15 +23,12 @@ const CheckoutSummary = async () => {
       <div className="w-full bg-white flex flex-col">
         <Heading
           level="h2"
-          className="flex flex-row text-xl items-baseline"
+          className="text-xl mb-6"
         >
           Resumo do pedido
         </Heading>
         <CartTotals data={cart} />
         <ItemsPreviewTemplate region={cart?.region} items={cart?.items} />
-        <div className="my-6">
-          <DiscountCode cart={cart} />
-        </div>
       </div>
     </div>
   )
