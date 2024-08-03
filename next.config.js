@@ -15,7 +15,7 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL,
+        hostname: "admin-viveiroprimavera.kaimara.com.br",
       },
       {
         protocol: "https",
