@@ -19,11 +19,11 @@ const sortOptions = [
   },
   {
     value: "price_asc",
-    label: "Preço: Menor -> Maior",
+    label: "Menor preço",
   },
   {
     value: "price_desc",
-    label: "Preço: Maior -> Menor",
+    label: "Maior preço",
   },
 ]
 
