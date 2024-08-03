@@ -15,7 +15,7 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
-        hostname: "admin-viveiroprimavera.kaimara.com.br",
+        hostname: "kaimara.com.br",
       },
       {
         protocol: "https",
