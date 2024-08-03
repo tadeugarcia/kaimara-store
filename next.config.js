@@ -15,7 +15,7 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
-        hostname: "kaimara.com.br",
+        hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_HOSTNAME,
       },
       {
         protocol: "https",
