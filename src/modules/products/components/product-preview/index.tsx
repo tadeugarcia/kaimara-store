@@ -45,7 +45,6 @@ export default async function ProductPreview({
         />
         <div className="grid mt-4">
           <Text className="text-ui-fg-subtle" data-testid="product-title">{productPreview.title}</Text>
-          <Text className="txt-compact-medium" data-testid="product-subtitle">{productPreview.subtitle}</Text>
           <div className="flex items-center gap-x-2 text-ui-fg-subtle-plus">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
