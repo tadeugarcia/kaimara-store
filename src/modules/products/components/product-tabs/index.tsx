@@ -1,11 +1,6 @@
 "use client"
 
 import { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
-
-import Back from "@modules/common/icons/back"
-import FastDelivery from "@modules/common/icons/fast-delivery"
-import Refresh from "@modules/common/icons/refresh"
-
 import Accordion from "./accordion"
 
 type ProductTabsProps = {
@@ -19,8 +14,8 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
       component: <ProductInfoTab product={product} />,
     },
     {
-      label: "Envio e devoluções",
-      component: <ShippingInfoTab />,
+      label: "Descrição do produto",
+      component: <DescriptionInfoTab />,
     },
   ]
 
@@ -84,38 +79,12 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
   )
 }
 
-const ShippingInfoTab = () => {
+const DescriptionInfoTab = ({ product }: ProductTabsProps) => {
   return (
-    <div className="text-small-regular py-8">
-      <div className="grid grid-cols-1 gap-y-8">
-        <div className="flex items-start gap-x-2">
-          <FastDelivery />
-          <div>
-            <span className="font-semibold">Entrega rápida</span>
-            <p className="max-w-sm">
-              Seu pedido chegará em 3-5 dias úteis no local de retirada ou no conforto da sua casa.
-            </p>
-          </div>
-        </div>
-        <div className="flex items-start gap-x-2">
-          <Refresh />
-          <div>
-            <span className="font-semibold">Trocas simples</span>
-            <p className="max-w-sm">
-              O tamanho não está certo? Sem problemas - trocamos seu produto por um novo.
-            </p>
-          </div>
-        </div>
-        <div className="flex items-start gap-x-2">
-          <Back />
-          <div>
-            <span className="font-semibold">Devoluções fáceis</span>
-            <p className="max-w-sm">
-              Basta devolver o produto e reembolsaremos seu dinheiro. Sem perguntas - faremos o possível para garantir que sua devolução seja sem complicações.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="text-medium text-ui-fg-subtle py-8">
+        <p>
+          {product.description}
+        </p>
     </div>
   )
 }
