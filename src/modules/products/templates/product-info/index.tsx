@@ -25,10 +25,6 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         <Heading level="h3" className="text-medium text-ui-fg-subtle" data-testid="product-subtitle">
           {product.subtitle}
         </Heading>
-
-        <Text className="text-medium text-ui-fg-subtle" data-testid="product-description">
-          {product.description}
-        </Text>
       </div>
     </div>
   )
